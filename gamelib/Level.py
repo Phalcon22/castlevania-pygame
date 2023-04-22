@@ -14,7 +14,7 @@ class Level():
         self.background = BACKGROUND[int(choix)-1]
         self.background_rect = self.background.get_rect()
 
-        level = "level/level" + choix
+        level = "levels/level" + choix
         
         self.level1 = []
         self.all_sprite = pygame.sprite.Group()

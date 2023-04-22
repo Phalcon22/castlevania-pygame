@@ -62,7 +62,7 @@ class Game:
                     self.left = True
                 if event.type == KEYDOWN and event.key == K_RIGHT:
                     self.right = True
-                if event.type == KEYDOWN and event.key == K_RCTRL:
+                if event.type == KEYDOWN and (event.key == K_RCTRL or event.key == K_LCTRL):
                     self.belmont.attack()
                 if event.type == KEYDOWN and event.key == K_RETURN:
                     self.belmont.secondary_attack(self.secondary_weapons_sprites, self.all_sprite)

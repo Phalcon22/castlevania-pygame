@@ -1,8 +1,15 @@
 import pygame
 
-from win32com.shell import shell, shellcon
-mydocuments = shell.SHGetFolderPath(0, shellcon.CSIDL_PERSONAL, 0, 0)
+import os
 
+if os.name == 'posix': # Linux
+    from pathlib import Path
+    mydocuments = str(Path.home()) + '/.local/share/castlevania-save/'
+elif os.name == 'nt': # Windows
+    from win32com.shell import shell, shellcon
+    mydocuments = shell.SHGetFolderPath(0, shellcon.CSIDL_PERSONAL, 0, 0)
+else:
+    raise Exception(f"Unsupported OS: {os.name}")
 
 
 pygame.init()

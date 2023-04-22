@@ -16,7 +16,7 @@ def main():
     pygame.mouse.set_visible(0)
     pygame.display.set_caption("Castlevania")
     pygame.display.set_icon(ICON)
-    screen = pygame.display.set_mode(SCREEN_SIZE, FULLSCREEN, 32)
+    screen = pygame.display.set_mode(SCREEN_SIZE, 32)
     Title(screen)
     
 
